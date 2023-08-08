@@ -1,7 +1,9 @@
-// import React from "react";
+import React from "react";
 
-const ExploreSec1 = () => {
-  return <div>ExploreSec1</div>;
+const ExploreSec1:React.FC = () => {
+  return <div>
+
+  </div>;
 };
 
 export default ExploreSec1;

@@ -1,13 +1,15 @@
+import React from 'react';
 import './App.css'
-import { ExploreIndex } from './Pages/Explore/ExploreIndex/ExploreIndex'
-import HomeIndex from './Pages/Home/HomeIndex/HomeIndex'
+import  ExploreIndex  from './Pages/Explore/ExploreIndex/ExploreIndex'
+// import HomeIndex from './Pages/Home/HomeIndex/HomeIndex'
 
-function App() {
+
+const App: React.FC = () => {
 
   return (
     <div>
-        <HomeIndex/>
         <ExploreIndex/>
+        {/* <HomeIndex/> */}
     </div>
   )
 }

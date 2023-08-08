@@ -12,17 +12,23 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ image, heading, rate, count, price }) => {
   return (
     <Box
-    display={'flex'}
-    flexDir={'column'}
-    justifyContent={'center'}
-    // alignItems={'start'}
+      display={'flex'}
+      flexDir={'column'}
+      justifyContent={'start'}
+      alignItems={'flex-start'}
       border='1px solid #F3F2FB'
       p={'.625rem'}
       w={'14.25rem'}
       h={'19.813rem'}
       cursor={'pointer'}
     >
-      <Box display='flex' justifyContent={'center'} alignItems='center' mb='.75rem'>
+      <Box
+        display='flex'
+        justifyContent={'center'}
+        alignItems='center'
+        alignSelf={'center'}
+        mb='.75rem'
+      >
         <Image
           src={image}
           alt={heading}
@@ -42,7 +48,14 @@ const Card: React.FC<CardProps> = ({ image, heading, rate, count, price }) => {
       </Heading>
 
       <Box mt='.625rem'>
-        <Text as='span' fontSize={'xs'} lineHeight={4} pr='1.813rem'>
+        <Text
+          as='span'
+          fontSize={'xs'}
+          lineHeight={4}
+          pr='.625rem'
+         
+          textAlign={'left'}
+        >
           By Temilade Openiyi
         </Text>
         <Text as='span' fontSize={'xs'} lineHeight={4} ml='0.5rem' pr='.625rem'>
@@ -53,13 +66,14 @@ const Card: React.FC<CardProps> = ({ image, heading, rate, count, price }) => {
         </Text>
       </Box>
       <Text
-      display={'flex'}
-      justifyContent={'start'}
-      alignItems={'center'}
+        display={'flex'}
+        justifyContent={'start'}
+        alignSelf={'flex-start'}
         fontSize={'sm'}
         fontWeight={'bold'}
         lineHeight={5}
         color={'#6D5DD3'}
+        textAlign={'start'}
       >
         ${price}
       </Text>
@@ -68,4 +82,3 @@ const Card: React.FC<CardProps> = ({ image, heading, rate, count, price }) => {
 };
 
 export default Card;
-

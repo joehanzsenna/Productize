@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import forwardIcon from '../../../assets/icons/forward-icon.svg';
 import Card from '../../../components/Card';
 import axios, { AxiosResponse } from 'axios';
+import Container from '../../../components/Container';
 
 // Define the type for a product
 interface Product {
@@ -62,38 +63,44 @@ const ExploreSec3: React.FC = () => {
   };
 
   return (
-    <Box as={`section`} px={`14.375rem`}>
-      <Box
-        display={`flex`}
-        justifyContent={`space-between`}
-        alignItems={`center`}
-        mt={`3rem`}
-        mb={`1rem`}
-      >
-        <Heading fontSize={'2xl'} fontWeight={'bold'} lineHeight={8}>
-          Based on your recent search
-        </Heading>
-        <Box display={'inline-flex'}>
-          <Image src={forwardIcon} alt='forward-icon' w={'2rem'} h={'2rem'} />
-        </Box>
-      </Box>
-
-      {/* Conditional rendering based on error state */}
-      {error ? (
-        <Box>Error: {error}</Box>
-      ) : (
+    <Box as={`section`} pl={`14.375rem`} pr={'14.3125rem'}>
+      <Container>
         <Box
-          display={`grid`}
-          gridTemplateColumns={`repeat(4, 1fr)`}
-          justifyContent={`center`}
-          gap={`1.438rem`}
+          display={`flex`}
+          justifyContent={`space-between`}
+          alignItems={`center`}
+          mt={`3rem`}
+          mb={`1rem`}
         >
-          {renderCards()}
+          <Heading
+            fontSize={'2xl'}
+            fontWeight={'bold'}
+            lineHeight={8}
+           
+          >
+            Based on your recent search
+          </Heading>
+          <Box display={'inline-flex'}>
+            <Image src={forwardIcon} alt='forward-icon' w={'2rem'} h={'2rem'} />
+          </Box>
         </Box>
-      )}
+
+        {/* Conditional rendering based on error state */}
+        {error ? (
+          <Box>Error: {error}</Box>
+        ) : (
+          <Box
+            display={`grid`}
+            gridTemplateColumns={`repeat(4, 1fr)`}
+            justifyContent={`center`}
+            gap={`1.438rem`}
+          >
+            {renderCards()}
+          </Box>
+        )}
+      </Container>
     </Box>
   );
 };
 
 export default ExploreSec3;
-

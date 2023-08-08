@@ -9,23 +9,31 @@ import Container from '../../components/Container';
 
 const Footer: React.FC = () => {
   return (
-    <Container>
-      <Box
-        background='#F3F2FB'
-        display='flex'
-        flexDirection='column'
-        marginTop='9.625rem'
-        paddingTop='1rem'
-      >
+    <Box
+      background='#F3F2FB'
+      display='flex'
+      flexDirection='column'
+      marginTop='9.625rem'
+      paddingTop='1rem'
+      // w={'100%'}
+    >
+      <Container>
         <Box
           display='flex'
           justifyContent='space-between'
           alignItems='center'
           paddingBottom='1rem'
           px='8rem'
+          // width={`100%`}
+         
         >
           <Box>
-            <Heading fontSize='2xl' fontWeight='medium' lineHeight='tall' textAlign={'start'}>
+            <Heading
+              fontSize='2xl'
+              fontWeight='medium'
+              lineHeight='tall'
+              textAlign={'start'}
+            >
               Share knowledge online
             </Heading>
             <Text fontSize='md' fontWeight='medium' lineHeight='base'>
@@ -50,8 +58,10 @@ const Footer: React.FC = () => {
             Create Product
           </Box>
         </Box>
-        <hr />
+      </Container>
+     <Box border={'1px solid #f5f5f5'}></Box>
 
+      <Container>
         <Box display='flex' gap='4.125rem' marginTop='2.75rem' px='8rem'>
           <Box>
             <img src={Logo} alt='Logo' />
@@ -62,6 +72,7 @@ const Footer: React.FC = () => {
             fontWeight='medium'
             lineHeight='base'
             cursor={'pointer'}
+            textAlign={'start'}
           >
             <p>Privacy Policy</p>
             <p>Cookie settings</p>
@@ -74,6 +85,7 @@ const Footer: React.FC = () => {
             fontWeight='medium'
             lineHeight='base'
             cursor={'pointer'}
+            textAlign={'start'}
           >
             <p>Blog</p>
             <p>Help and support</p>
@@ -85,6 +97,7 @@ const Footer: React.FC = () => {
             fontWeight='medium'
             lineHeight='base'
             cursor={'pointer'}
+            textAlign={'start'}
           >
             <p>About us</p>
             <p>Contact us</p>
@@ -115,8 +128,8 @@ const Footer: React.FC = () => {
             <img src={dribble} alt='Dribble' />
           </Box>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

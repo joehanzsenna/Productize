@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import forwardIcon from '../../../assets/icons/forward-icon.svg';
 import Card from '../../../components/Card';
 import axios, { AxiosResponse } from 'axios';
+import Container from '../../../components/Container';
 
 // Define the type for a product
 interface Product {
@@ -16,7 +17,7 @@ interface Product {
   price: number;
 }
 
-const ExploreSec2: React.FC = () => {
+const ExploreSec4: React.FC = () => {
   // State to hold the products and error message
   const [products, setProducts] = useState<Product[]>([]); // Change type to Product[]
   const [error, setError] = useState<string | null>(null);
@@ -36,6 +37,8 @@ const ExploreSec2: React.FC = () => {
       if (response.status !== 200) {
         throw new Error('Network response was not okay');
       }
+      console.log(response.data);
+      
 
       // Update state with fetched products and clear error
       setProducts(response.data);
@@ -62,7 +65,9 @@ const ExploreSec2: React.FC = () => {
   };
 
   return (
-    <Box as={`section`} px={`14.375rem`}>
+    <Box as={`section`} pl={`14.375rem`} pr={'14.3125rem'}>
+      <Container>
+
       <Box
         display={`flex`}
         justifyContent={`space-between`}
@@ -73,7 +78,7 @@ const ExploreSec2: React.FC = () => {
         <Heading fontSize={'2xl'} fontWeight={'bold'} lineHeight={8}>
           Most downloaded
         </Heading>
-        <Box display={'inline-flex'}>
+        <Box display={'flex'}>
           <Image src={forwardIcon} alt='forward-icon' w={'2rem'} h={'2rem'} />
         </Box>
       </Box>
@@ -92,9 +97,10 @@ const ExploreSec2: React.FC = () => {
           {renderCards()}
         </Box>
       )}
+        </Container>
     </Box>
   );
 };
 
-export default ExploreSec2;
+export default ExploreSec4;
 

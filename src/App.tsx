@@ -9,8 +9,8 @@ const App: React.FC = () => {
 
   return (
     <div>
-        <ExploreIndex/>
-        {/* <ExDesignIndex/> */}
+        <ExDesignIndex/>
+        {/* <ExploreIndex/> */}
         {/* <HomeIndex/> */}
     </div>
   )

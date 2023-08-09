@@ -1,9 +1,10 @@
 import { Box, Heading, Icon, Text } from "@chakra-ui/react";
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 const ExDesignSec2:React.FC = () => {
   return (
-    <Box w="100%" maxW={"1440px"} m="auto">
+    <Box w="100%" maxW={"1440px"} m="5rem auto">
       <Box
         w="80%"
         m="auto"
@@ -11,46 +12,59 @@ const ExDesignSec2:React.FC = () => {
         gridTemplateColumns={"1fr 1fr"}
         justifyContent={"center"}
       >
-        <Box w="50%">
+        <Box w="45%">
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            marginBottom={"1rem"}
           >
-            <Heading>Filter</Heading>
-            <Text>Clear</Text>
+            <Heading fontSize={"18px"}>Filter</Heading>
+            <Text fontSize={"12px"}>Clear</Text>
           </Box>
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            marginBottom={"5px"}
+            borderBottom={"1px solid grey"}
+            p={".5rem 0"}
           >
-            <Text>Showing</Text>
-            <Icon as="" />
+            <Text fontSize={"14px"}>Showing</Text>
+            <Icon as={IoIosArrowDown} />
           </Box>
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            marginBottom={"5px"}
+            borderBottom={"1px solid grey"}
+            p={".5rem 0"}
           >
-            <Text>Sort by</Text>
-            <Icon as="" values="" />
+            <Text fontSize={"14px"}>Sort by</Text>
+            <Icon as={IoIosArrowDown} values="" />
           </Box>
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            marginBottom={"5px"}
+            borderBottom={"1px solid grey"}
+            p={".5rem 0"}
           >
-            <Text>Rating</Text>
-            <Icon as="" />
+            <Text fontSize={"14px"}>Rating</Text>
+            <Icon as={IoIosArrowDown} />
           </Box>
           <Box
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
+            marginBottom={"5px"}
+            borderBottom={"1px solid grey"}
+            p={".5rem 0"}
           >
-            <Text>Price</Text>
-            <Icon as="" />
+            <Text fontSize={"14px"}>Price</Text>
+            <Icon as={IoIosArrowDown} />
           </Box>
         </Box>
         <Box w="100%">

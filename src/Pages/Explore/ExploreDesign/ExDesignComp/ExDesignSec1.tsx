@@ -8,6 +8,14 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { featuredDb } from "../ExDesignDB/ExDesignDb";
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
+// interface features {
+//   id: number;
+//     img: string;
+//     title: string;
+//     price: number;
+//     naming: string;
+
+// }
 
 const ExDesignSec1: React.FC = () => {
   const [feat] = useState(featuredDb);
@@ -16,7 +24,13 @@ const ExDesignSec1: React.FC = () => {
     <Box maxW={"1440px"} w="100%" height={"auto"} m="0 auto">
       <Box w="80%" m="0 auto">
         <Box w="100%">
-          <Heading as="h3" mb="8" fontSize={"23"} fontWeight={"600"}>
+          <Heading
+            as="h3"
+            mb="8"
+            fontSize={"24px"}
+            fontWeight={"700"}
+            fontStyle={"normal"}
+          >
             Design
           </Heading>
           <Box
@@ -25,17 +39,76 @@ const ExDesignSec1: React.FC = () => {
             display={"flex"}
             gap={"4"}
             borderBottom={"1px solid lightgrey"}
-            paddingBottom={"4"}
+            // paddingBottom={"4"}
           >
-            <Box as="li">Featured</Box>
-            <Box as="li">New</Box>
-            <Box as="li">Trending</Box>
-            <Box as="li">Most popular</Box>
+            <Box
+              as="li"
+              fontSize={"16px"}
+              _hover={{
+                color: "#111014",
+                fontWeight: "600",
+                borderBottom: ".1rem solid #000",
+              }}
+              cursor={"pointer"}
+              color={"#878789"}
+              fontWeight={"500"}
+              p={"1rem .5rem"}
+            >
+              Featured
+            </Box>
+            <Box
+              as="li"
+              fontSize={"16px"}
+              _hover={{
+                color: "#111014",
+                fontWeight: "600",
+                borderBottom: ".1rem solid #000",
+              }}
+              cursor={"pointer"}
+              color={"#878789"}
+              p={"1rem .5rem"}
+            >
+              New
+            </Box>
+            <Box
+              as="li"
+              fontSize={"16px"}
+              _hover={{
+                color: "#111014",
+                fontWeight: "600",
+                borderBottom: ".1rem solid #000",
+              }}
+              cursor={"pointer"}
+              color={"#878789"}
+              p={"1rem .5rem"}
+            >
+              Trending
+            </Box>
+            <Box
+              as="li"
+              fontSize={"16px"}
+              _hover={{
+                color: "#111014",
+                fontWeight: "600",
+                borderBottom: ".1rem solid #000",
+              }}
+              cursor={"pointer"}
+              color={"#878789"}
+              p={"1rem .5rem"}
+            >
+              Most popular
+            </Box>
           </Box>
         </Box>
 
         <Box w="100%" mt="8">
-          <Heading as="h3" mb="4" fontSize={"23"} fontWeight={"600"}>
+          <Heading
+            as="h3"
+            mb="4"
+            fontSize={"24px"}
+            fontWeight={"700"}
+            fontStyle={"normal"}
+          >
             Featured
           </Heading>
           <Swiper
@@ -45,11 +118,11 @@ const ExDesignSec1: React.FC = () => {
             }}
             modules={[Pagination]}
             navigation={{
-              nextEl: ".swiper-button-next",
+              nextEl: ".swiper-button-nexting",
               prevEl: ".swiper-button-previous",
-              clickable: true,
+              clickable:  : true,
             }}
-            className="mySwiper" 
+            className="mySwiper"
           >
             {feat.map((featuredDb) => {
               const { id, title, naming, img, price } = featuredDb;
@@ -78,16 +151,32 @@ const ExDesignSec1: React.FC = () => {
           </Swiper>
           <Box
             position={"absolute"}
-            w="5rem"
-            right={"0"}
+            w="80%"
+            p="1rem"
+            m="auto"
+            mb="3rem"
             display={"flex"}
-            alignItems={"center"}
+            justifyContent={"end"}
           >
-            <Box>
-              <Icon as={BsArrowLeftShort} className="swiper-button-previous" />
-            </Box>
-            <Box>
-              <Icon as={BsArrowRightShort} className="swiper-button-next" />
+            <Box w="6rem" display={"flex"} justifyContent={"space-between"}>
+              <Box>
+                <Icon
+                  as={BsArrowLeftShort}
+                  fontSize={"2.5rem"}
+                  zIndex={"2"}
+                  cursor={"pointer"}
+                  className="swiper-button-previous"
+                />
+              </Box>
+              <Box>
+                <Icon
+                  as={BsArrowRightShort}
+                  fontSize={"2.5rem"}
+                  zIndex={"2"}
+                  cursor={"pointer"}
+                  className="swiper-button-nexting"
+                />
+              </Box>
             </Box>
           </Box>
         </Box>

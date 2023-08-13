@@ -8,7 +8,12 @@ import Container from '../../components/Container';
 
 const Navbar: React.FC = () => {
   return (
-    <Box w='100%' background='#17B6BA' p='1rem 8rem' h='9rem'>
+    <Box
+    //  w='100%'
+      background='#17B6BA' 
+      // p='1rem 8rem' 
+      h='9rem'
+      >
         <Container>
         <Box
           as='nav'

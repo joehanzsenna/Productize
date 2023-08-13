@@ -65,7 +65,11 @@ const ExploreSec4: React.FC = () => {
   };
 
   return (
-    <Box as={`section`} pl={`14.375rem`} pr={'14.3125rem'}>
+    <Box 
+    as={`section`} 
+    // pl={`14.375rem`} 
+    // pr={'14.3125rem'}
+    >
       <Container>
 
       <Box
@@ -92,7 +96,7 @@ const ExploreSec4: React.FC = () => {
           gridTemplateColumns={`repeat(4, 1fr)`}
           justifyContent={`center`}
           alignItems={'center'}
-          gap={`1.438rem`}
+          gap={`4rem`}
         >
           {renderCards()}
         </Box>

@@ -35,7 +35,7 @@ const ExploreSec2: React.FC = () => {
 
       // Check for successful response status
       if (response.status !== 200) {
-        throw new Error('Network response was not okay');
+        setError('Network response was not okay');
       }
 
       // Update state with fetched products and clear error
@@ -63,7 +63,11 @@ const ExploreSec2: React.FC = () => {
   };
 
   return (
-    <Box as={`section`} pl={`14.375rem`} pr={'14.3125rem'}>
+    <Box 
+    as={`section`}
+    //  pl={`14.375rem`} 
+    //  pr={'14.3125rem'}
+     >
       <Container>
         <Box
           display={`flex`}
@@ -75,7 +79,7 @@ const ExploreSec2: React.FC = () => {
           <Heading fontSize={'2xl'} fontWeight={'bold'} lineHeight={8}>
             Featured
           </Heading>
-          <Box display={'flex'} >
+          <Box display={'flex'}>
             <Image src={forwardIcon} alt='forward-icon' w={'2rem'} h={'2rem'} />
           </Box>
         </Box>
@@ -87,8 +91,9 @@ const ExploreSec2: React.FC = () => {
           <Box
             display={`grid`}
             gridTemplateColumns={`repeat(4, 1fr)`}
-            justifyContent={`center`}
-            gap={`1.438rem`}
+            justifyContent={`space-between`}
+            alignItems={'center'}
+            gap={`4rem`}
           >
             {renderCards()}
           </Box>

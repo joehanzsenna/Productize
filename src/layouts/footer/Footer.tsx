@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           justifyContent='space-between'
           alignItems='center'
           paddingBottom='1rem'
-          px='8rem'
+          // px='8rem'
           // width={`100%`}
          
         >
@@ -62,7 +62,12 @@ const Footer: React.FC = () => {
      <Box border={'1px solid #f5f5f5'}></Box>
 
       <Container>
-        <Box display='flex' gap='4.125rem' marginTop='2.75rem' px='8rem'>
+        <Box 
+        display='flex' 
+        gap='4.125rem' 
+        marginTop='2.75rem'
+        //  px='8rem'
+         >
           <Box>
             <img src={Logo} alt='Logo' />
           </Box>
@@ -110,7 +115,7 @@ const Footer: React.FC = () => {
           alignItems='center'
           paddingBottom='2.5rem'
           paddingTop='.6rem'
-          px='8rem'
+          // px='8rem'
         >
           <Box>
             <span>2023</span>

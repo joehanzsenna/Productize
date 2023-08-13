@@ -18,9 +18,10 @@ const Card: React.FC<CardProps> = ({ image, heading, rate, count, price }) => {
       alignItems={'flex-start'}
       border='1px solid #F3F2FB'
       p={'.625rem'}
-      w={'14.25rem'}
-      h={'19.813rem'}
+      w={'14.0625rem'}
+      h={'19.8125rem'}
       cursor={'pointer'}
+      _hover={{boxShadow: '5px 5px 5px #000', transform: 'scale(1.01)'}}
     >
       <Box
         display='flex'

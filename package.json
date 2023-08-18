@@ -17,7 +17,12 @@
     "framer-motion": "^10.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.15.0"
+=======
+    "react-icons": "^4.10.1",
+    "swiper": "^10.1.0"
+>>>>>>> b8e2019f063abe1da40706dd523b588b03771670
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -6,6 +6,7 @@ import plant from '../../../assets/icons/Group 1.png';
 
 const ExploreSec1: React.FC = () => {
   return (
+<<<<<<< HEAD
     <Box as={`section`} pos={'relative'}>
       <Container>
         <Box
@@ -31,6 +32,23 @@ const ExploreSec1: React.FC = () => {
           <Image src={plant} pos={'absolute'} right={'1rem'} top={'-.1rem'} />
         </Box>
       </Container>
+=======
+    <Box as={`section`}>
+
+      <Box
+      display={`flex`}
+      justifyContent={`center`}
+      alignItems={`center`}
+      mt={`5.7rem`}
+
+
+      >
+        <img src={backgroundImage} alt="background-image" />
+
+      </Box>
+
+
+>>>>>>> b8e2019f063abe1da40706dd523b588b03771670
     </Box>
   );
 };
